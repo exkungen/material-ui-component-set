@@ -26,7 +26,7 @@
       '& .MuiPaper-root': {
         position: 'static', // :-(
       },
-      minHeight: '100px',
+      height: '100%',
     },
   }),
 }))();
