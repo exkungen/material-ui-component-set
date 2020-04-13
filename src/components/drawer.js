@@ -1,7 +1,7 @@
 (() => ({
   name: 'Drawer',
   type: 'BODY_COMPONENT',
-  allowedTypes: ['DRAWER_MENU', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
+  allowedTypes: ['DRAWER_MENU', 'BODY_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'VERTICAL',
   jsx: <div className={classes.root}>{children}</div>,
   styles: () => () => {
