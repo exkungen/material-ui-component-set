@@ -1,32 +1,29 @@
 (() => ({
   name: 'Drawer',
   type: 'BODY_COMPONENT',
-  allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
+  allowedTypes: ['DRAWER_MENU', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'VERTICAL',
-  jsx: (() => {
-    const { Drawer } = window.MaterialUI.Core;
-    const { anchor, variant, open } = options;
-    const isDev = B.env === 'dev';
-    const drawer = (
-      <Drawer
-        variant={variant}
-        anchor={anchor}
-        open={open}
-        className={['drawer', classes.drawer, isDev ? classes.dev : ''].join(
-          ' ',
-        )}
-      >
-        {children.length ? children : 'Drawer'}
-      </Drawer>
-    );
-    return isDev ? <div>{drawer}</div> : drawer;
-  })(),
-  styles: () => () => ({
-    dev: {
-      '& .MuiPaper-root': {
-        position: 'static', // :-(
+  jsx: <div className={classes.root}>{children}</div>,
+  styles: () => () => {
+    const drawerWidth = 250;
+
+    return {
+      root: {
+        display: 'flex',
+        height: '100vh',
+        '& div.view-trail': {
+          // width: `calc(100% - ${drawerWidth}px)`,
+          // marginLeft: drawerWidth,
+          flexGrow: 1,
+        },
+        '& div.drawer': {
+          width: drawerWidth,
+          flexShrink: 0,
+          '& div.MuiDrawer-paper ': {
+            width: drawerWidth,
+          },
+        },
       },
-      minHeight: '100px',
-    },
-  }),
+    };
+  },
 }))();
