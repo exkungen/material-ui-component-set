@@ -1,28 +1,35 @@
 (() => ({
   name: 'Drawer',
   type: 'BODY_COMPONENT',
-  allowedTypes: ['DRAWER_MENU', 'BODY_COMPONENT', 'CONTENT_COMPONENT'],
+  allowedTypes: [
+    'DRAWER_MENU',
+    'BODY_COMPONENT',
+    'CONTAINER_COMPONENT',
+    'CONTENT_COMPONENT',
+  ],
   orientation: 'VERTICAL',
-  jsx: <div className={classes.root}>{children}</div>,
+  jsx: (() => {
+    const isDev = B.env === 'dev';
+    return (
+      <div className={[classes.root, isDev && classes.dev].join(' ')}>
+        {children}
+      </div>
+    );
+  })(),
   styles: () => () => {
     const drawerWidth = 250;
 
     return {
       root: {
         display: 'flex',
-        height: '100vh',
-        '& div.view-trail': {
-          // width: `calc(100% - ${drawerWidth}px)`,
+        '&> .MuiAppBar-root': {
+          backgroundColor: 'black',
           // marginLeft: drawerWidth,
-          flexGrow: 1,
+          width: `calc(100% - ${drawerWidth}px)`,
         },
-        '& div.drawer': {
-          width: drawerWidth,
-          flexShrink: 0,
-          '& div.MuiDrawer-paper ': {
-            width: drawerWidth,
-          },
-        },
+      },
+      dev: {
+        height: '100vh',
       },
     };
   },
