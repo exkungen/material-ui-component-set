@@ -1,73 +1,41 @@
 (() => ({
-  name: 'IconButton',
-  icon: 'IconIcon',
+  name: 'Chip',
+  icon: 'ContainerIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'IconButton',
+      name: 'Chip',
       options: [
         {
+          type: 'VARIABLE',
+          label: 'Label',
+          key: 'label',
+          value: ['Label'],
+        },
+        {
+          type: 'TOGGLE',
+          label: 'Disabled',
+          key: 'disabled',
+          value: false,
+        },
+        {
+          label: 'Variant',
+          key: 'variant',
+          value: 'default',
           type: 'CUSTOM',
-          label: 'Link to',
-          key: 'linkType',
-          value: 'Internal',
           configuration: {
             as: 'BUTTONGROUP',
             dataType: 'string',
             allowedInput: [
-              { name: 'Internal page', value: 'Internal' },
-              { name: 'External page', value: 'External' },
-              { name: 'Action', value: 'Action' },
+              { name: 'Default', value: 'default' },
+              { name: 'Outlined', value: 'outlined' },
             ],
           },
         },
         {
-          value: '',
-          label: 'Page',
-          key: 'linkTo',
-          type: 'ENDPOINT',
-          configuration: {
-            condition: {
-              type: 'SHOW',
-              option: 'linkType',
-              comparator: 'EQ',
-              value: 'Internal',
-            },
-          },
-        },
-        {
-          value: '',
-          label: 'URL',
-          key: 'linkToExternal',
-          type: 'TEXT',
-          configuration: {
-            placeholder: 'Starts with https:// or http://',
-            condition: {
-              type: 'SHOW',
-              option: 'linkType',
-              comparator: 'EQ',
-              value: 'External',
-            },
-          },
-        },
-        {
-          value: '',
-          label: 'Action',
-          key: 'ActionId',
-          type: 'ACTION',
-          configuration: {
-            condition: {
-              type: 'SHOW',
-              option: 'linkType',
-              comparator: 'EQ',
-              value: 'Action',
-            },
-          },
-        },
-        {
-          value: 'medium',
           label: 'Size',
           key: 'size',
+          value: 'medium',
           type: 'CUSTOM',
           configuration: {
             as: 'BUTTONGROUP',
@@ -75,19 +43,34 @@
             allowedInput: [
               { name: 'Small', value: 'small' },
               { name: 'Medium', value: 'medium' },
-              { name: 'Large', value: 'large' },
             ],
           },
         },
         {
-          label: 'Icon',
-          key: 'icon',
-          value: 'Email',
+          type: 'COLOR',
+          label: 'Color',
+          key: 'color',
+          value: 'Primary',
+        },
+        {
+          type: 'COLOR',
+          label: 'Text Color',
+          key: 'textColor',
+          value: 'White',
+        },
+        {
+          label: 'StartIcon',
+          key: 'startIcon',
+          value: 'None',
           type: 'CUSTOM',
           configuration: {
             as: 'DROPDOWN',
             dataType: 'string',
             allowedInput: [
+              {
+                name: '',
+                value: 'None',
+              },
               {
                 name: 'AcUnit',
                 value: 'AcUnit',
@@ -1337,19 +1320,53 @@
                 value: 'Work',
               },
             ],
+            condition: {
+              type: 'SHOW',
+              option: 'avatar',
+              comparator: 'EQ',
+              value: '',
+            },
           },
         },
         {
-          type: 'COLOR',
-          label: 'Color',
-          key: 'color',
-          value: 'Primary',
+          type: 'TEXT',
+          label: 'Avatar',
+          key: 'avatar',
+          value: '',
+          configuration: {
+            condition: {
+              type: 'SHOW',
+              option: 'startIcon',
+              comparator: 'EQ',
+              value: 'None',
+            },
+          },
         },
         {
-          value: ['0rem', '0rem', '0rem', '0rem'],
-          label: 'Outer space',
-          key: 'outerSpacing',
+          label: 'Avatar type',
+          key: 'avatartype',
+          value: 'text',
+          type: 'CUSTOM',
+          configuration: {
+            as: 'BUTTONGROUP',
+            dataType: 'string',
+            allowedInput: [
+              { name: 'Text', value: 'text' },
+              { name: 'Image', value: 'image' },
+            ],
+            condition: {
+              type: 'HIDE',
+              option: 'avatar',
+              comparator: 'EQ',
+              value: '',
+            },
+          },
+        },
+        {
           type: 'SIZES',
+          label: 'Outer Space',
+          key: 'margin',
+          value: ['M', 'M', 'M', 'M'],
         },
       ],
       descendants: [],

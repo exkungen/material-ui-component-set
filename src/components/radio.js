@@ -1,7 +1,6 @@
 (() => ({
   name: 'RadioGroup',
   type: 'CONTENT_COMPONENT',
-  category: 'FORM',
   allowedTypes: [],
   orientation: 'HORIZONTAL',
   jsx: (() => {
@@ -48,6 +47,10 @@
     // maintain the type of the value
     const getValue = val => (isNaN(Number(val)) ? val : Number(val));
     const [value, setValue] = useState(getValue(componentValue));
+
+    useEffect(() => {
+      setValue(getValue(componentValue));
+    }, [componentValue]);
 
     const {
       FormControl: MUIFormControl,
