@@ -1,10 +1,10 @@
 (() => ({
-  name: 'ExpansionPanel',
+  name: '@betty-blocks/material/ExpansionPanel',
   icon: 'AccordionItemIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'ExpansionPanel',
+      name: '@betty-blocks/material/ExpansionPanel',
       options: [
         {
           key: 'title',

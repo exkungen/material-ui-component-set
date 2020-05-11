@@ -1,5 +1,5 @@
 (() => ({
-  name: 'List',
+  name: '@betty-blocks/material/List',
   type: 'CONTAINER_COMPONENT',
   allowedTypes: ['LIST_ITEM', 'LIST_SUBHEADER'],
   orientation: 'HORIZONTAL',

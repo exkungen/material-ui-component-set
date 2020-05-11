@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Alert',
+  name: '@betty-blocks/material/Alert',
   icon: 'AlertIcon',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],

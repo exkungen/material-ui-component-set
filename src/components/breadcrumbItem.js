@@ -1,5 +1,5 @@
 (() => ({
-  name: 'BreadcrumbItem',
+  name: '@betty-blocks/material/BreadcrumbItem',
   icon: 'BreadcrumbItemIcon',
   type: 'BREADCRUMB_ITEM',
   allowedTypes: [],

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'AppBar',
+  name: '@betty-blocks/material/AppBar',
   type: 'BODY_COMPONENT',
   allowedTypes: ['CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',

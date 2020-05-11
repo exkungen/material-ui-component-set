@@ -1,5 +1,5 @@
 (() => ({
-  name: 'ListSubheader',
+  name: '@betty-blocks/material/ListSubheader',
   type: 'LIST_SUBHEADER',
   allowedTypes: [],
   orientation: 'VERTICAL',

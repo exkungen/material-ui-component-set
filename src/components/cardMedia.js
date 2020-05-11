@@ -1,5 +1,5 @@
 (() => ({
-  name: 'CardMedia',
+  name: '@betty-blocks/material/CardMedia',
   type: 'CARD_MEDIA',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

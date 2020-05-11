@@ -1,5 +1,5 @@
 (() => ({
-  name: 'CardHeader',
+  name: '@betty-blocks/material/CardHeader',
   type: 'CARD_HEADER',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

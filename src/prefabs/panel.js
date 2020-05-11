@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Panel',
+  name: '@betty-blocks/material/Panel',
   icon: 'PanelIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Panel',
+      name: '@betty-blocks/material/Panel',
       options: [
         {
           type: 'VARIABLE',
@@ -33,7 +33,7 @@
       ],
       descendants: [
         {
-          name: 'Row',
+          name: '@betty-blocks/material/Row',
           options: [
             {
               type: 'CUSTOM',
@@ -76,7 +76,7 @@
           ],
           descendants: [
             {
-              name: 'Column',
+              name: '@betty-blocks/material/Column',
               options: [
                 { type: 'TOGGLE', label: 'Show', key: 'show', value: true },
                 {

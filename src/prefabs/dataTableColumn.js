@@ -1,10 +1,10 @@
 (() => ({
-  name: 'DataTableColumn',
+  name: '@betty-blocks/material/DataTableColumn',
   icon: 'DataTableColumn',
   category: 'DATA',
   structure: [
     {
-      name: 'DataTableColumn',
+      name: '@betty-blocks/material/DataTableColumn',
       options: [
         {
           value: '',
@@ -42,7 +42,7 @@
       ],
       descendants: [
         {
-          name: 'Text',
+          name: '@betty-blocks/material/Text',
           options: [
             {
               type: 'VARIABLE',

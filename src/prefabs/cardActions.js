@@ -1,10 +1,10 @@
 (() => ({
-  name: 'CardActions',
+  name: '@betty-blocks/material/CardActions',
   icon: 'CardActionsIcon',
   category: 'CARDS',
   structure: [
     {
-      name: 'CardActions',
+      name: '@betty-blocks/material/CardActions',
       options: [
         {
           type: 'CUSTOM',
@@ -39,7 +39,7 @@
       ],
       descendants: [
         {
-          name: 'Button',
+          name: '@betty-blocks/material/Button',
           options: [
             {
               type: 'CUSTOM',

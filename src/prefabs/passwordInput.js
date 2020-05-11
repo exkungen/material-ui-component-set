@@ -1,10 +1,10 @@
 (() => ({
-  name: 'PasswordInput',
+  name: '@betty-blocks/material/PasswordInput',
   icon: 'PasswordInputIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'TextField',
+      name: '@betty-blocks/material/TextField',
       options: [
         {
           value: 'Password',

@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Paper',
+  name: '@betty-blocks/material/Paper',
   icon: 'PaperIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Paper',
+      name: '@betty-blocks/material/Paper',
       options: [
         {
           label: 'Square',
@@ -71,7 +71,7 @@
       ],
       descendants: [
         {
-          name: 'Row',
+          name: '@betty-blocks/material/Row',
           options: [
             {
               type: 'CUSTOM',
@@ -114,7 +114,7 @@
           ],
           descendants: [
             {
-              name: 'Column',
+              name: '@betty-blocks/material/Column',
               options: [
                 { type: 'TOGGLE', label: 'Show', key: 'show', value: true },
                 {

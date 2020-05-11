@@ -1,10 +1,10 @@
 (() => ({
-  name: 'RadioGroup',
+  name: '@betty-blocks/material/RadioGroup',
   icon: 'RadioButtonIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'RadioGroup',
+      name: '@betty-blocks/material/RadioGroup',
       options: [
         {
           value: 'Label',

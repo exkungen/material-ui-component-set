@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Breadcrumbs',
+  name: '@betty-blocks/material/Breadcrumbs',
   type: 'CONTAINER_COMPONENT',
   allowedTypes: ['BREADCRUMB_ITEM'],
   orientation: 'HORIZONTAL',

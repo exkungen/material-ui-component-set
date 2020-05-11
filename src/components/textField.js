@@ -1,5 +1,5 @@
 (() => ({
-  name: 'TextField',
+  name: '@betty-blocks/material/TextField',
   icon: 'TextInputIcon',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],

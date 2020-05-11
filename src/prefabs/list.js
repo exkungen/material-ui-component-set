@@ -1,10 +1,10 @@
 (() => ({
-  name: 'List',
+  name: '@betty-blocks/material/List',
   icon: 'OrderedListIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'List',
+      name: '@betty-blocks/material/List',
       options: [
         {
           value: '',
@@ -30,7 +30,7 @@
       ],
       descendants: [
         {
-          name: 'ListItem',
+          name: '@betty-blocks/material/ListItem',
           options: [
             {
               type: 'VARIABLE',

@@ -1,10 +1,10 @@
 (() => ({
-  name: 'SubmitButton',
+  name: '@betty-blocks/material/SubmitButton',
   icon: 'SubmitButtonIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'Button',
+      name: '@betty-blocks/material/Button',
       options: [
         {
           type: 'CUSTOM',

@@ -1,14 +1,14 @@
 (() => ({
-  name: 'CardContent',
+  name: '@betty-blocks/material/CardContent',
   icon: 'CardContentIcon',
   category: 'CARDS',
   structure: [
     {
-      name: 'CardContent',
+      name: '@betty-blocks/material/CardContent',
       options: [],
       descendants: [
         {
-          name: 'Text',
+          name: '@betty-blocks/material/Text',
           options: [
             {
               type: 'VARIABLE',
@@ -50,7 +50,7 @@
           descendants: [],
         },
         {
-          name: 'Text',
+          name: '@betty-blocks/material/Text',
           options: [
             {
               type: 'VARIABLE',

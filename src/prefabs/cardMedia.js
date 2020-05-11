@@ -1,10 +1,10 @@
 (() => ({
-  name: 'CardMedia',
+  name: '@betty-blocks/material/CardMedia',
   icon: 'CardMediaIcon',
   category: 'CARDS',
   structure: [
     {
-      name: 'CardMedia',
+      name: '@betty-blocks/material/CardMedia',
       options: [
         {
           label: 'Media type',

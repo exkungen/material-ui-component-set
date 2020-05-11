@@ -1,10 +1,10 @@
 (() => ({
-  name: 'CardHeader',
+  name: '@betty-blocks/material/CardHeader',
   icon: 'CardHeaderIcon',
   category: 'CARDS',
   structure: [
     {
-      name: 'CardHeader',
+      name: '@betty-blocks/material/CardHeader',
       options: [
         {
           value: '',

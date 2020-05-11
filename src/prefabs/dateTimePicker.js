@@ -1,10 +1,10 @@
 (() => ({
-  name: 'DateTimePicker',
+  name: '@betty-blocks/material/DateTimePicker',
   icon: 'DateTimePickerIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'DateTimePicker',
+      name: '@betty-blocks/material/DateTimePicker',
       options: [
         {
           label: 'Type',

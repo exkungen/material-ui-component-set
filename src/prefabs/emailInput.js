@@ -1,10 +1,10 @@
 (() => ({
-  name: 'EmailInput',
+  name: '@betty-blocks/material/EmailInput',
   icon: 'EmailInputIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'TextField',
+      name: '@betty-blocks/material/TextField',
       options: [
         {
           value: 'Email',

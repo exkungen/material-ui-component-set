@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Tabs',
+  name: '@betty-blocks/material/Tabs',
   icon: 'TabsIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Tabs',
+      name: '@betty-blocks/material/Tabs',
       options: [
         {
           label: 'Selected tab index',
@@ -104,7 +104,7 @@
       ],
       descendants: [
         {
-          name: 'Tab',
+          name: '@betty-blocks/material/Tab',
           options: [
             {
               label: 'Tab label',

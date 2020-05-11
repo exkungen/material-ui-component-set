@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Form',
+  name: '@betty-blocks/material/Form',
   icon: 'FormIcon',
   type: 'CONTAINER_COMPONENT',
   allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],

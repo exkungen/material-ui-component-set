@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Box',
+  name: '@betty-blocks/material/Box',
   icon: 'ContainerIcon',
   category: 'LAYOUT',
   structure: [
     {
-      name: 'Box',
+      name: '@betty-blocks/material/Box',
       options: [
         {
           value: 'flex-start',

@@ -1,10 +1,10 @@
 (() => ({
-  name: 'TextArea',
+  name: '@betty-blocks/material/TextArea',
   icon: 'TextareaIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'TextField',
+      name: '@betty-blocks/material/TextField',
       options: [
         {
           value: 'label',

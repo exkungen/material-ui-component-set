@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Card',
+  name: '@betty-blocks/material/Card',
   type: 'CONTAINER_COMPONENT',
   allowedTypes: [
     'BODY_COMPONENT',

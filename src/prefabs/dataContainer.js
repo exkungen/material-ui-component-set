@@ -1,10 +1,10 @@
 (() => ({
-  name: 'DataContainer',
+  name: '@betty-blocks/material/DataContainer',
   icon: 'DataContainer',
   category: 'DATA',
   structure: [
     {
-      name: 'DataContainer',
+      name: '@betty-blocks/material/DataContainer',
       options: [
         {
           value: '',

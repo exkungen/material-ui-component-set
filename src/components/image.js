@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Image',
+  name: '@betty-blocks/material/Image',
   icon: 'ImageIcon',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'DataList',
+  name: '@betty-blocks/material/DataList',
   icon: 'DataList',
   type: 'CONTAINER_COMPONENT',
   allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Row',
+  name: '@betty-blocks/material/Row',
   icon: 'RowIcon',
   type: 'BODY_COMPONENT',
   allowedTypes: ['LAYOUT_COMPONENT'],

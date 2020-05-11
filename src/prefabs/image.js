@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Image',
+  name: '@betty-blocks/material/Image',
   icon: 'ImageIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Image',
+      name: '@betty-blocks/material/Image',
       options: [
         {
           value: '',

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Chip',
+  name: '@betty-blocks/material/Chip',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

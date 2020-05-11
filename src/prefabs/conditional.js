@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Conditional',
+  name: '@betty-blocks/material/Conditional',
   icon: 'CheckboxIcon',
   category: 'LOGIC',
   structure: [
     {
-      name: 'Conditional',
+      name: '@betty-blocks/material/Conditional',
       options: [
         {
           type: 'VARIABLE',

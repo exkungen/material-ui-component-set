@@ -1,10 +1,10 @@
 (() => ({
-  name: 'AutoComplete',
+  name: '@betty-blocks/material/AutoComplete',
   icon: 'AutoCompleteIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'AutoComplete',
+      name: '@betty-blocks/material/AutoComplete',
       options: [
         {
           value: 'label',

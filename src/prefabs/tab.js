@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Tab',
+  name: '@betty-blocks/material/Tab',
   icon: 'TabIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Tab',
+      name: '@betty-blocks/material/Tab',
       options: [
         {
           label: 'Tab label',

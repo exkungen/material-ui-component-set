@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Tabs',
+  name: '@betty-blocks/material/Tabs',
   type: 'CONTENT_COMPONENT',
   allowedTypes: ['TAB_COMPONENT'],
   orientation: 'HORIZONTAL',

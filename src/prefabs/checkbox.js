@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Checkbox',
+  name: '@betty-blocks/material/Checkbox',
   icon: 'CheckboxIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'Checkbox',
+      name: '@betty-blocks/material/Checkbox',
       options: [
         {
           value: ['Label'],

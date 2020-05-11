@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Card',
+  name: '@betty-blocks/material/Card',
   icon: 'CardIcon',
   category: 'CARDS',
   structure: [
     {
-      name: 'Card',
+      name: '@betty-blocks/material/Card',
       options: [
         {
           label: 'Square',
@@ -71,7 +71,7 @@
       ],
       descendants: [
         {
-          name: 'CardHeader',
+          name: '@betty-blocks/material/CardHeader',
           options: [
             {
               value: '',
@@ -115,7 +115,7 @@
           descendants: [],
         },
         {
-          name: 'CardMedia',
+          name: '@betty-blocks/material/CardMedia',
           options: [
             {
               label: 'Media type',
@@ -185,11 +185,11 @@
           descendants: [],
         },
         {
-          name: 'CardContent',
+          name: '@betty-blocks/material/CardContent',
           options: [],
           descendants: [
             {
-              name: 'Text',
+              name: '@betty-blocks/material/Text',
               options: [
                 {
                   type: 'VARIABLE',
@@ -231,7 +231,7 @@
               descendants: [],
             },
             {
-              name: 'Text',
+              name: '@betty-blocks/material/Text',
               options: [
                 {
                   type: 'VARIABLE',
@@ -275,7 +275,7 @@
           ],
         },
         {
-          name: 'CardActions',
+          name: '@betty-blocks/material/CardActions',
           options: [
             {
               type: 'CUSTOM',
@@ -310,7 +310,7 @@
           ],
           descendants: [
             {
-              name: 'Button',
+              name: '@betty-blocks/material/Button',
               options: [
                 {
                   type: 'CUSTOM',

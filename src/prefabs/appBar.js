@@ -1,10 +1,10 @@
 (() => ({
-  name: 'AppBar',
+  name: '@betty-blocks/material/AppBar',
   icon: 'NavbarIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'AppBar',
+      name: '@betty-blocks/material/AppBar',
       options: [
         {
           label: 'Background color',
@@ -180,7 +180,7 @@
       ],
       descendants: [
         {
-          name: 'Button',
+          name: '@betty-blocks/material/Button',
           options: [
             {
               type: 'CUSTOM',
@@ -1630,7 +1630,7 @@
           descendants: [],
         },
         {
-          name: 'Button',
+          name: '@betty-blocks/material/Button',
           options: [
             {
               type: 'CUSTOM',

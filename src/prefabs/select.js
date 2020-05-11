@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Select',
+  name: '@betty-blocks/material/Select',
   icon: 'SelectIcon',
   category: 'FORM',
   structure: [
     {
-      name: 'Select',
+      name: '@betty-blocks/material/Select',
       options: [
         {
           value: 'Label',

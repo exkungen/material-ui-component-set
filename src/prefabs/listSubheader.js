@@ -1,10 +1,10 @@
 (() => ({
-  name: 'ListSubheader',
+  name: '@betty-blocks/material/ListSubheader',
   icon: 'OrderedListIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'ListSubheader',
+      name: '@betty-blocks/material/ListSubheader',
       options: [
         {
           type: 'VARIABLE',

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'DateTimePicker',
+  name: '@betty-blocks/material/DateTimePicker',
   icon: 'DateTimePickerIcon',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],

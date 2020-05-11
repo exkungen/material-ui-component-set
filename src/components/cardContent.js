@@ -1,5 +1,5 @@
 (() => ({
-  name: 'CardContent',
+  name: '@betty-blocks/material/CardContent',
   type: 'CARD_CONTENT',
   allowedTypes: ['BODY_COMPONENT', 'CONTAINER_COMPONENT', 'CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',

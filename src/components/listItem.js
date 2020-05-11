@@ -1,5 +1,5 @@
 (() => ({
-  name: 'ListItem',
+  name: '@betty-blocks/material/ListItem',
   type: 'LIST_ITEM',
   allowedTypes: ['CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',

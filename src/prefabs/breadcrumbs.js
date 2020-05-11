@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Breadcrumbs',
+  name: '@betty-blocks/material/Breadcrumbs',
   icon: 'BreadcrumbIcon',
   category: 'NAVIGATION',
   structure: [
     {
-      name: 'Breadcrumbs',
+      name: '@betty-blocks/material/Breadcrumbs',
       options: [
         {
           label: 'Max Items',
@@ -1386,7 +1386,7 @@
       ],
       descendants: [
         {
-          name: 'BreadcrumbItem',
+          name: '@betty-blocks/material/BreadcrumbItem',
           options: [
             {
               type: 'VARIABLE',
@@ -2698,7 +2698,7 @@
           descendants: [],
         },
         {
-          name: 'BreadcrumbItem',
+          name: '@betty-blocks/material/BreadcrumbItem',
           options: [
             {
               type: 'VARIABLE',

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'RadioGroup',
+  name: '@betty-blocks/material/RadioGroup',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

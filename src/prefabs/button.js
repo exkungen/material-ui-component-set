@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Button',
+  name: '@betty-blocks/material/Button',
   icon: 'ButtonIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Button',
+      name: '@betty-blocks/material/Button',
       options: [
         {
           type: 'CUSTOM',

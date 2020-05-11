@@ -1,5 +1,5 @@
 (() => ({
-  name: 'AutoComplete',
+  name: '@betty-blocks/material/AutoComplete',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

@@ -1,5 +1,5 @@
 (() => ({
-  name: 'Checkbox',
+  name: '@betty-blocks/material/Checkbox',
   type: 'CONTENT_COMPONENT',
   allowedTypes: [],
   orientation: 'HORIZONTAL',

@@ -1,10 +1,10 @@
 (() => ({
-  name: 'Chip',
+  name: '@betty-blocks/material/Chip',
   icon: 'ChipIcon',
   category: 'CONTENT',
   structure: [
     {
-      name: 'Chip',
+      name: '@betty-blocks/material/Chip',
       options: [
         {
           type: 'VARIABLE',
