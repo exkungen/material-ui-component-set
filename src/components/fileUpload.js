@@ -13,6 +13,7 @@
       Button,
       Typography,
     } = window.MaterialUI.Core;
+    const { Icons } = window.MaterialUI;
     const {
       property,
       label,
@@ -27,6 +28,10 @@
       position,
       accept,
       margin,
+      variant,
+      icon,
+      iconPosition,
+      buttonText,
     } = options;
 
     const isDev = env === 'dev';
@@ -77,12 +82,32 @@
         />
         <Button
           size={size}
-          variant="contained"
-          color="primary"
+          variant={variant}
+          classes={{
+            root: classes.button,
+            contained: classes.contained,
+            outlined: classes.outlined,
+          }}
           component="span"
           disabled={disabled}
+          startIcon={
+            variant !== 'icon' &&
+            icon !== 'None' &&
+            iconPosition === 'start' &&
+            React.createElement(Icons[icon])
+          }
+          endIcon={
+            variant !== 'icon' &&
+            icon !== 'None' &&
+            iconPosition === 'end' &&
+            React.createElement(Icons[icon])
+          }
         >
-          Upload
+          {variant === 'icon'
+            ? React.createElement(Icons[icon === 'None' ? 'Error' : icon], {
+                fontSize: size,
+              })
+            : useText(buttonText)}
         </Button>
         <Typography variant="body1" noWrap className={classes.span}>
           {files.length === 0 && 'Select file(s)...'}
@@ -128,40 +153,61 @@
 
     return isDev ? <div className={classes.root}>{Control}</div> : Control;
   })(),
-  styles: () => () => ({
-    root: {
-      '& > *': {
-        pointerEvents: 'none',
+  styles: B => t => {
+    const style = new B.Styling(t);
+    return {
+      root: {
+        '& > *': {
+          pointerEvents: 'none',
+        },
       },
-    },
-    label: {
-      alignItems: ({ options: { position } }) =>
-        position === 'top' || position === 'bottom'
-          ? ['start', '!important']
-          : 'center',
-    },
-    input: {
-      display: 'none',
-    },
-    control: {
-      display: 'inline-flex',
-      alignItems: 'center',
-    },
-    fullwidth: {
-      display: 'flex',
-      width: '100%',
-    },
-    span: {
-      flex: 1,
-      textAlign: 'start',
-      marginLeft: ['1rem', '!important'],
-      marginRight: ['1rem', '!important'],
-    },
-    start: {
-      marginLeft: '1rem',
-    },
-    end: {
-      marginRight: '1rem',
-    },
-  }),
+      label: {
+        alignItems: ({ options: { position } }) =>
+          position === 'top' || position === 'bottom'
+            ? ['start', '!important']
+            : 'center',
+      },
+      input: {
+        display: 'none',
+      },
+      control: {
+        display: 'inline-flex',
+        alignItems: 'center',
+      },
+      fullwidth: {
+        display: 'flex',
+        width: '100%',
+      },
+      span: {
+        flex: 1,
+        textAlign: 'start',
+        marginLeft: ['1rem', '!important'],
+        marginRight: ['1rem', '!important'],
+      },
+      start: {
+        marginLeft: '1rem',
+      },
+      end: {
+        marginRight: '1rem',
+      },
+      button: {
+        color: ({ options: { variant, textColor, background } }) => [
+          style.getColor(variant === 'icon' ? background : textColor),
+          '!important',
+        ],
+      },
+      contained: {
+        backgroundColor: ({ options: { background } }) => [
+          style.getColor(background),
+          '!important',
+        ],
+      },
+      outlined: {
+        borderColor: ({ options: { background } }) => [
+          style.getColor(background),
+          '!important',
+        ],
+      },
+    };
+  },
 }))();
