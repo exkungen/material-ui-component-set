@@ -9,7 +9,7 @@
         {
           label: 'Icon',
           key: 'icon',
-          value: 'FileCopy',
+          value: 'AcUnit',
           type: 'CUSTOM',
           configuration: {
             as: 'DROPDOWN',
@@ -1271,10 +1271,22 @@
           },
         },
         {
-          value: 'Body1',
-          label: 'Type',
-          key: 'type',
-          type: 'FONT',
+          value: 'S',
+          label: 'Size',
+          key: 'size',
+          type: 'SIZE',
+        },
+        {
+          type: 'COLOR',
+          label: 'Color',
+          key: 'color',
+          value: 'Black',
+        },
+        {
+          value: ['0rem', '0rem', '0rem', '0rem'],
+          label: 'Outer space',
+          key: 'outerSpacing',
+          type: 'SIZES',
         },
       ],
       descendants: [],
