@@ -24,13 +24,15 @@
       buttonText,
     } = options;
 
+    const { disabled: disabledByParent } = parent || {};
+
     const isDev = B.env === 'dev';
     const isAction = linkType === 'action';
     const hasLink = linkTo && linkTo.id !== '';
     const hasExternalLink = linkToExternal && linkToExternal.id !== '';
 
     const generalProps = {
-      disabled,
+      disabled: disabled || disabledByParent,
       size,
       href:
         linkType === 'external' && hasExternalLink ? linkToExternal : undefined,

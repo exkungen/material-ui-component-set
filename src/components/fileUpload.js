@@ -1,11 +1,10 @@
 (() => ({
   name: 'FileUpload',
-  icon: 'FileInputIcon',
   type: 'CONTENT_COMPONENT',
   allowedTypes: ['CONTENT_COMPONENT'],
   orientation: 'HORIZONTAL',
   jsx: (() => {
-    const { env, useText, getProperty, getActionInput } = B;
+    const { env, useText, getProperty, getActionInput, Children } = B;
     const {
       FormControl,
       FormControlLabel,
@@ -36,7 +35,10 @@
 
     const isDev = env === 'dev';
     const inputRef = React.createRef();
-    const [files, setFiles] = useState([]);
+    const [uploads, setUploads] = useState({
+      files: [],
+      value: null,
+    });
     const helper = useText(helperText);
     const propLabel =
       property && getProperty(property) && getProperty(property).label;
@@ -49,18 +51,26 @@
     const actionInput = getActionInput(actionInputId);
 
     const handleChange = e => {
+      const currentValue = e.target.value;
       const fileNames = Object.entries(e.target.files).map(item => {
-        const value = item[1];
-        return value.name;
+        const itemValue = item[1];
+        return itemValue.name;
       });
-      setFiles(fileNames);
+      setUploads({
+        files: fileNames,
+        value: currentValue,
+      });
     };
 
     const clearFiles = e => {
       e.preventDefault();
-      inputRef.current.value = null;
-      setFiles([]);
+      setUploads({
+        files: [],
+        value: null,
+      });
     };
+
+    const { files, value } = uploads;
 
     const UploadComponent = (
       <div
@@ -79,6 +89,7 @@
           type="file"
           onChange={handleChange}
           ref={inputRef}
+          value={value}
         />
         <Button
           size={size}
@@ -114,17 +125,6 @@
           {files.length === 1 && files[0]}
           {files.length > 1 && `Selected ${files.length} files`}
         </Typography>
-
-        <Button
-          variant="contained"
-          color="primary"
-          component="span"
-          size={size}
-          disabled={disabled || files.length === 0}
-          onClick={clearFiles}
-        >
-          Cancel
-        </Button>
       </div>
     );
 
@@ -136,20 +136,26 @@
         disabled={disabled}
         margin={margin}
       >
-        <FormControlLabel
-          control={UploadComponent}
-          label={`${labelText}${requiredText}`}
-          labelPlacement={position}
-          classes={{
-            root: classes.label,
-          }}
-        />
+        <div className={classes.labelWrapper}>
+          <FormControlLabel
+            control={UploadComponent}
+            label={`${labelText}${requiredText}`}
+            labelPlacement={position}
+            classes={{
+              root: classes.label,
+            }}
+          />
+          <Children disabled={disabled || files.length === 0}>
+            {children}
+          </Children>
+        </div>
         {helper && <FormHelperText>{helper}</FormHelperText>}
       </FormControl>
     );
-    if (inputRef && inputRef.current) {
-      console.log(inputRef.current.files);
-    }
+
+    useEffect(() => {
+      B.defineFunction('clearFileUpload', e => clearFiles(e));
+    }, []);
 
     return isDev ? <div className={classes.root}>{Control}</div> : Control;
   })(),
@@ -157,11 +163,16 @@
     const style = new B.Styling(t);
     return {
       root: {
-        '& > *': {
-          pointerEvents: 'none',
-        },
+        display: ({ options: { fullWidth } }) =>
+          fullWidth ? 'block' : 'inline-block',
+      },
+      labelWrapper: {
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'space-between',
       },
       label: {
+        pointerEvents: B.env === 'dev' && 'none',
         alignItems: ({ options: { position } }) =>
           position === 'top' || position === 'bottom'
             ? ['start', '!important']
